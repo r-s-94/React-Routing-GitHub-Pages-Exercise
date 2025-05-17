@@ -7,16 +7,21 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 function App() {
   //const [count, setCount] = useState(0);
 
-  const router = createBrowserRouter([
+  const router = createBrowserRouter(
+    [
+      {
+        path: "/",
+        element: <ExampleComponent />,
+      },
+      {
+        path: "example2",
+        element: <ExampleComponent2 />,
+      },
+    ],
     {
-      path: "/",
-      element: <ExampleComponent />,
-    },
-    {
-      path: "example2",
-      element: <ExampleComponent2 />,
-    },
-  ]);
+      basename: "/React-Routing-GitHub-Pages-Exercise/",
+    }
+  );
 
   return (
     <>
